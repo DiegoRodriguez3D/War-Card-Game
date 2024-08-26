@@ -11,6 +11,8 @@
 		F10B6A6A2C7C6D88009C2018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B6A692C7C6D88009C2018 /* ContentView.swift */; };
 		F10B6A6C2C7C6D89009C2018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10B6A6B2C7C6D89009C2018 /* Assets.xcassets */; };
 		F10B6A6F2C7C6D89009C2018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10B6A6E2C7C6D89009C2018 /* Preview Assets.xcassets */; };
+		F10B6A7A2C7C7572009C2018 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B6A792C7C7572009C2018 /* GameViewModel.swift */; };
+		F10B6A7C2C7C7581009C2018 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B6A7B2C7C7581009C2018 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F10B6A692C7C6D88009C2018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F10B6A6B2C7C6D89009C2018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F10B6A6E2C7C6D89009C2018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F10B6A792C7C7572009C2018 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		F10B6A7B2C7C7581009C2018 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,8 @@
 		F10B6A662C7C6D88009C2018 /* War Card Game */ = {
 			isa = PBXGroup;
 			children = (
-				F10B6A672C7C6D88009C2018 /* War_Card_GameApp.swift */,
-				F10B6A692C7C6D88009C2018 /* ContentView.swift */,
+				F10B6A762C7C7502009C2018 /* Core */,
+				F10B6A752C7C74EE009C2018 /* App */,
 				F10B6A6B2C7C6D89009C2018 /* Assets.xcassets */,
 				F10B6A6D2C7C6D89009C2018 /* Preview Content */,
 			);
@@ -65,6 +69,40 @@
 				F10B6A6E2C7C6D89009C2018 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F10B6A752C7C74EE009C2018 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F10B6A672C7C6D88009C2018 /* War_Card_GameApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F10B6A762C7C7502009C2018 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F10B6A782C7C751E009C2018 /* Game */,
+				F10B6A772C7C7515009C2018 /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F10B6A772C7C7515009C2018 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F10B6A692C7C6D88009C2018 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		F10B6A782C7C751E009C2018 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F10B6A792C7C7572009C2018 /* GameViewModel.swift */,
+				F10B6A7B2C7C7581009C2018 /* GameView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10B6A7A2C7C7572009C2018 /* GameViewModel.swift in Sources */,
 				F10B6A6A2C7C6D88009C2018 /* ContentView.swift in Sources */,
+				F10B6A7C2C7C7581009C2018 /* GameView.swift in Sources */,
 				F10B6A682C7C6D88009C2018 /* War_Card_GameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

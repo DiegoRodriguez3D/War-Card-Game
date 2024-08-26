@@ -1,16 +1,12 @@
-//
-//  ContentView.swift
-//  War Card Game
-//
-//  Created by Diego Rodriguez on 26/8/24.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
+    
+    @StateObject private var viewModel = GameViewModel()
+    
     var body: some View {
         ZStack {
-            Image("background-plain")
+            Image("background-wood-grain")
                 .resizable()
                 .ignoresSafeArea()
             
@@ -23,17 +19,21 @@ struct ContentView: View {
                 
                 HStack {
                     Spacer()
-                    Image("card2")
+                    Image(viewModel.playerCard)
                     
                     Spacer()
                     
-                    Image("card3")
+                    Image(viewModel.cpuCard)
                     Spacer()
                 }
                 
                 Spacer()
                 
-                Image("button")
+                Button(action: {
+                    viewModel.deal()
+                }, label: {
+                    Image("button")
+                })
                 
                 Spacer()
                 
@@ -44,7 +44,7 @@ struct ContentView: View {
                         Text("PLAYER")
                             .font(.headline)
                             .padding(.bottom, 10)
-                        Text("0")
+                        Text("\(viewModel.playerScore)")
                             .font(.largeTitle)
                     }
                     Spacer()
@@ -52,19 +52,18 @@ struct ContentView: View {
                         Text("CPU")
                             .font(.headline)
                             .padding(.bottom, 10)
-                        Text("0")
+                        Text("\(viewModel.cpuScore)")
                             .font(.largeTitle)
                     }
                     Spacer()
-                }
+                }.foregroundColor(.white)
                 
                 Spacer()
-
             }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    GameView()
 }
